@@ -9,14 +9,30 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final ThemeData theme = new ThemeData();
+    final ThemeData theme = new ThemeData(
+      fontFamily: 'Quicksand',
+      appBarTheme: AppBarTheme(
+        titleTextStyle: TextStyle(
+          fontFamily: 'OpenSans',
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      textTheme: ThemeData.light().textTheme.copyWith(
+              titleLarge: TextStyle(
+            fontFamily: 'OpenSans',
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
+          )),
+    );
     return MaterialApp(
       title: 'Personal Expenses',
       theme: theme.copyWith(
-          colorScheme: theme.colorScheme.copyWith(
-        primary: Colors.purple,
-        secondary: Colors.amber,
-      )),
+        colorScheme: theme.colorScheme.copyWith(
+          primary: Colors.purple,
+          secondary: Colors.amber,
+        ),
+      ),
       home: MyHomePage(),
     );
   }
