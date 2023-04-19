@@ -11,6 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = new ThemeData(
+      primarySwatch: Colors.purple,
+      accentColor: Colors.amber,
       fontFamily: 'Quicksand',
       appBarTheme: AppBarTheme(
         titleTextStyle: TextStyle(
@@ -20,12 +22,12 @@ class MyApp extends StatelessWidget {
         ),
       ),
       textTheme: ThemeData.light().textTheme.copyWith(
-            titleLarge: TextStyle(
-              fontFamily: 'Quicksand',
-              fontWeight: FontWeight.bold,
-              fontSize: 18,
-            ),
+          titleLarge: TextStyle(
+            fontFamily: 'Quicksand',
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
           ),
+          labelLarge: TextStyle(color: Colors.white)),
     );
     return MaterialApp(
       title: 'Personal Expenses',
