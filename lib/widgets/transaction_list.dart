@@ -42,7 +42,7 @@ class TransactionList extends StatelessWidget {
                           horizontal: 15,
                         ),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(5)),
+                          borderRadius: BorderRadius.circular(5),
                           border: Border.all(
                             color: Theme.of(context).colorScheme.primary,
                             width: 2,
